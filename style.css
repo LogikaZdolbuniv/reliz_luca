@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background: #4b8f29;
+}
+
+/* Верхнє меню */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: #222;
+    border-bottom: 6px solid #3b6e22;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 3px 3px #000;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 12px;
+    text-shadow: 2px 2px #000;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #55ff55;
+}
+
+/* Головний блок */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 3px 3px 4px #000;
+    background: url(img/images.jpg) no-repeat center/cover;
+    min-height: 70vh;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #55ff55;
+    text-shadow: 4px 4px #000;
+}
+
+.hero p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* Картки */
+.card {
+    width: 195px;
+    height: 285px;
+    background: #313131;
+    border: 4px solid #111;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.img {
+    height: 30%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.textBox > .text {
+    font-weight: bold;
+}
+
+.textBox > .head {
+    font-size: 20px;
+}
+
+.textBox > .price {
+    font-size: 17px;
+}
+
+.textBox > span {
+    font-size: 12px;
+    color: lightgrey;
+}
+
+.card:hover > .textBox {
+    opacity: 1;
+}
+
+.card:hover > .img {
+    height: 65%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Розташування карток */
+.reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+h1{text-align: center;
+    margin-bottom: 20px;
+    color: #55ff55;
+    text-shadow: 4px 4px #000;
+}
+
+.character {
+    width: 130px;
+    height: 160px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.card:hover .character {
+    transform: scale(1.1);
+}
+
+.textBox .head {
+    color: #55ff55;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.textBox span {
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
